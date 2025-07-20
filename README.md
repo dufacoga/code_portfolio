@@ -1,12 +1,12 @@
 # ⚛️ Personal Portfolio Powered by React
 
 <p align="center">
-  <a href="https://github.com/dufacoga/react-portfolio/issues"><img src="https://img.shields.io/github/issues/dufacoga/react-portfolio"/></a>
-  <a href="https://github.com/dufacoga/react-portfolio/stargazers"><img src="https://img.shields.io/github/stars/dufacoga/react-portfolio"/></a>
-  <a href="https://github.com/dufacoga/react-portfolio/network/members"><img src="https://img.shields.io/github/forks/dufacoga/react-portfolio"/></a>
-  <a href="https://github.com/dufacoga/react-portfolio/commits/main"><img src="https://img.shields.io/github/last-commit/dufacoga/react-portfolio"/></a>
-  <a href="https://github.com/dufacoga/react-portfolio/blob/main/CONTRIBUTING.md"><img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat"/></a>
-  <a href="https://github.com/dufacoga/react-portfolio/blob/main/LICENSE"><img src="https://img.shields.io/github/license/dufacoga/react-portfolio"/></a>
+  <a href="https://github.com/dufacoga/code_portfolio/issues"><img src="https://img.shields.io/github/issues/dufacoga/code_portfolio"/></a>
+  <a href="https://github.com/dufacoga/code_portfolio/stargazers"><img src="https://img.shields.io/github/stars/dufacoga/code_portfolio"/></a>
+  <a href="https://github.com/dufacoga/code_portfolio/network/members"><img src="https://img.shields.io/github/forks/dufacoga/code_portfolio"/></a>
+  <a href="https://github.com/dufacoga/code_portfolio/commits/main"><img src="https://img.shields.io/github/last-commit/dufacoga/code_portfolio"/></a>
+  <a href="https://github.com/dufacoga/code_portfolio/blob/main/CONTRIBUTING.md"><img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat"/></a>
+  <a href="https://github.com/dufacoga/code_portfolio/blob/main/LICENSE"><img src="https://img.shields.io/github/license/dufacoga/code_portfolio"/></a>
 </p>
 
 A responsive and elegant personal portfolio built entirely with **React** and **pure CSS Grid**.  
