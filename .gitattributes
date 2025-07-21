@@ -1,2 +1,8 @@
+# Ignore CSS public/
+# public/**/*.css linguist-vendored
+# Include CSS src/
+# src/**/*.css linguist-detectable=true
+
 *.css linguist-detectable=false
-public/** linguist-vendored
+src/**/*.css linguist-detectable=true
+public/**/*.css linguist-detectable=true
