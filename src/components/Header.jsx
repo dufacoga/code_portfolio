@@ -1,15 +1,12 @@
 import ThemeToggle from '../components/ThemeToggle';
 
-function Header({ subtitle }) {
+function Header() {
   return (
     <>
-      <div className="headertitle">
-        <h3>Theme</h3>
-        <span>{subtitle}</span>
-      </div>
-      <div className="headerdropdown">
+      <div><span className='keyword'>public enum</span> <span className='function'>THEME_TOGGLE</span>()</div>
+      {`{`}
         <ThemeToggle onThemeChanged={(theme) => console.log('Theme changed to:', theme)} />
-      </div>
+      {`}`}
     </>
   );
 }

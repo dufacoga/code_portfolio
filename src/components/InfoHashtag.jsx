@@ -1,7 +1,7 @@
-function InfoHashtag({ text }) {
+function InfoHashtag({ text, end }) {
   return (
     <>
-      <span className="infomyarticlehashtag">{text}</span>
+      <span className="string">"{text}"</span>{end}{`  `}
     </>
   );
 }

@@ -3,41 +3,52 @@
 /* #region Color & Size Variables */
 
     :root {
-        --bg-color: #e5e6e6;
-        --text-color: #4c4c4c;
-        --accent-color: #4c4c4c;
-        --accent-text-color: #e5e6e6;
-        --card-group-bg: #eff0f0;
-        --card-bg: #ffffff;
+        --bg-color: #0c0f12;
+        --text-color: #959bac;
+        --accent-color: #5f6470;
+        --accent-text-color: #15191e;
+        --card-group-bg: #181d23;
+        --card-bg: #1d232a;
+        --codeblock-color: #dcdcdc;
+        --comment-color: #007f39;
+        --keyword-color: #005cc5;
+        --string-color: #ce9178;
+        --function-color: #2aa198;
+        --summary-color: #4699d4;
+        --property-color: #a38fcf;
         --border-radius: 4px;
         --font-size-h1: 1.25rem;
         --font-size-h2: 1.25rem;
         --font-size-h3: 1rem;
-        --font-size-h4: 0.75rem;
-        --font-size-body: 0.7rem;
+        --font-size-h4: 0.85rem;
+        --font-size-body: 0.80rem;
+        --font-size-body-xs: 0.70rem;
         --font-weight-h1-bold: 800;
         --font-weight-bold: 600;
         --font-weight-regular: 400;
+        --border-radius: 0px;
     }
 
     [data-theme='dark'] {
         --bg-color: #15191e;
-        --text-color: #7e8391;
-        --accent-color: #6b76f0;
+        --text-color: #959bac;
+        --accent-color: #5f35ff;
         --accent-text-color: #15191e;
         --card-group-bg: #181d23;
         --card-bg: #1d232a;
-        --border-radius: 16px;
+        --codeblock-color: #ffffff;
+        --border-radius: 0px;
     }
 
     [data-theme='light'] {
-        --bg-color: #e5e6e6;
-        --text-color: #616873;
+        --bg-color: #f9f9f9;
+        --text-color: #494e57;
         --accent-color: #5f35ff;
         --accent-text-color: #e5e6e6;
         --card-group-bg: #eff0f0;
         --card-bg: #ffffff;
-        --border-radius: 16px;
+        --codeblock-color: #333333;
+        --border-radius: 0px;
     }
 
 /* #endregion */
@@ -96,17 +107,81 @@
     }
 
     body, p, span, a, button, div {
+        color: var(--text-color);
         font-size: var(--font-size-body);
         font-weight: var(--font-weight-regular);
     }
 
+    .anondecorated {
+        all: unset;
+        text-decoration: none;
+        color: inherit;
+        cursor: pointer;
+        font: inherit;
+    }
+
+    .codeblock {
+        color: var(--codeblock-color) !important;
+        font-size: var(--font-size-body);
+        font-weight: var(--font-weight-regular);
+    }
+
+    .comment {
+        color: var(--comment-color) !important;
+        font-size: var(--font-size-body);
+        font-weight: var(--font-weight-regular);
+    }
+
+    .keyword {
+        color: var(--keyword-color) !important;
+        font-size: var(--font-size-body);
+        font-weight: var(--font-weight-regular);
+    }
+
+    .string {
+        color: var(--string-color) !important;
+        font-size: var(--font-size-body);
+        font-weight: var(--font-weight-regular);
+    }
+
+    .function {
+        color: var(--function-color) !important;
+        font-size: var(--font-size-body);
+        font-weight: var(--font-weight-regular);
+    }
+
+    .summary {
+        color: var(--summary-color) !important;
+        font-size: var(--font-size-body);
+        font-weight: var(--font-weight-regular);
+    }
+
+    .property {
+        color: var(--property-color) !important;
+        font-size: var(--font-size-body);
+        font-weight: var(--font-weight-regular);
+    }
+
+    .text-xs {
+        font-size: var(--font-size-body-xs) !important;
+    }
+
+    .tab {
+        padding: 0.2rem 1rem;
+    }
+
+    .text-break {
+        white-space: normal;
+        word-break: break-word;
+        overflow-wrap: anywhere;
+    }
 /* #endregion */
 
 /* Principal Container */
 .home {
     display: grid;
     margin: 0;
-    padding: 1rem 1rem 0.5rem 1rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
     height: 100%;
     width: 100%;
     grid-gap: 0.75rem;
@@ -130,7 +205,7 @@
     margin: 0;
     padding: 0;
     width: 100%;
-    grid-gap: 1rem;
+    grid-gap: 1.5rem;
     grid-template-rows: repeat(7,auto);
     grid-template-columns: 1fr;
     align-content: start;
@@ -147,14 +222,13 @@
     width: 100%;
     justify-self: stretch;
     align-self: stretch;
-    background-color: var(--card-bg);
+    background-color: var(--bg-color);
     border-radius: var(--border-radius);
-    padding: 1.5rem;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
     transition: box-shadow 0.3s ease;
 }
 
-a.card {
+a.nolink {
+    pointer-events: none;
     text-decoration: none;
     color: var(--text-color);
 }
@@ -166,105 +240,13 @@ a.card {
 
 /* #region 1st Card 1st Column - Header */
 
-    .headercard {
-        display: grid;
-        margin: 0;
-        padding: 1rem !important;
-        grid-gap: 0;
-        grid-template-columns: repeat(2,auto);
-        align-content: center;
-    }
-
-    .headertitle {
-        display: grid;
-        margin: 0;
-        padding: 0;
-        grid-gap: 0.25rem;
-        grid-template-rows: repeat(2,auto);
-        align-content: center;
-        justify-content: start;
-    }
-
     /* #region Theme Toggle */
 
-        .theme-toggle-button {
-            background: transparent;
-            border: none;
-            cursor: pointer;
-            color: var(--text-color);
-        }
-
-        .headerdropdown {
-            display: grid;
-            margin: 0;
-            padding: 0;
-            align-content: center;
-            justify-content: end;
-        }
         /* Wrapper for the dropdown component, enabling absolute positioning */
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-
-        /* Button that toggles the dropdown menu */
-        .dropdown-button {
-            background-color: var(--card-bg);
-            color: var(--text-color);
-            border: none;
-            padding: 0.5rem 1rem;
-            border-radius: var(--border-radius);
-            cursor: pointer;
-            display: grid;
-            gap: 0.75rem;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: auto;
-            align-items: center;
-            transition: background-color 0.2s ease;
-        }
-
-            /* Hover effect for the dropdown button */
-            .dropdown-button:hover {
-                background-color: var(--card-group-bg);
-            }
-
-        .dropdown-text {
-            display:none;
-        }
-
-        /* Hidden menu that appears when dropdown is activated */
-        .dropdown-menu {
-            display: none;
-            position: absolute;
-            background-color: var(--card-group-bg);
-            border: none;
-            border-radius: var(--border-radius);
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            margin-top: 0.25rem;
-            min-width: 160px;
-            z-index: 999;
-        }
-
-        /* When the dropdown is open, display the menu */
-        .dropdown.open .dropdown-menu {
-            display: block;
-        }
-
-        /* Individual item inside the dropdown menu */
         .dropdown-item {
-            padding: 0.5rem 1rem;
+            padding: 0.2rem 1rem;
             cursor: pointer;
-            color: var(--text-color);
-            font-size: var(--font-size-body);
-            font-weight: var(--font-weight-regular);
-            border-radius: var(--border-radius);
         }
-
-            /* Hover effect for dropdown items */
-            .dropdown-item:hover {
-                background-color: var(--bg-color);
-                border-radius: var(--border-radius);
-            }
 
     /* #endregion */
 
@@ -282,11 +264,11 @@ a.card {
 
     .profile-item {
         display: grid;
-        margin: auto;
+        margin: 0;
         padding: 0;
         align-content: center;
-        justify-content: center;
-        text-align: center;
+        justify-content: start;
+        text-align: start;
     }
 
     /* #region Profile Image */
@@ -303,8 +285,7 @@ a.card {
 
         /* Wrapper for the profile image with circular border and shadow */
         .profile-image-wrapper {
-            padding: 3px;
-            border-radius: 50%;
+            padding: 0px;
             box-shadow: 0 0 0 3px var(--accent-color);
             width: 7rem;
             height: 7rem;
@@ -316,7 +297,6 @@ a.card {
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
-                border-radius: 50%;
             }
 
         /* Styles the name/title in the profile info section */
@@ -355,7 +335,7 @@ a.card {
     .profile-info {
         display: grid;
         margin: 0;
-        padding: 0 4.5rem;
+        padding: 0;
         grid-gap: 0.5rem;
         grid-template-rows: repeat(2,auto);
     }
@@ -374,7 +354,6 @@ a.card {
         display: grid;
         margin: 0;
         grid-gap: 0.5rem;
-        grid-template-rows: repeat(6,auto);
         align-content: center;
     }
 
@@ -383,9 +362,8 @@ a.card {
         margin: 0;
         padding: 0;
         grid-gap: 0.25rem;
-        grid-template-columns: auto 1fr;
         align-content: center;
-        justify-content: end;
+        justify-content: start;
     }
 
         .contact > span {
@@ -426,8 +404,8 @@ a.card {
 
     .infoskill {
         display: inline-block;
-        background-color: var(--accent-color);
-        color: var(--accent-text-color);
+        background-color: var(--bg-color);
+        color: var(--text-color);
         margin: 0.2rem 0.2rem;
         padding: 0.25rem 0.6rem;
         border-radius: 999px;
@@ -575,7 +553,7 @@ a.card {
             width: 100%;
             justify-self: stretch;
             align-self: stretch;
-            background-color: var(--card-bg);
+            background-color: var(--bg-color);
             transition: box-shadow 0.3s ease;
         }
 
@@ -662,22 +640,8 @@ a.card {
     grid-gap: 1rem;
     grid-template-columns: auto;
     grid-template-rows: repeat(2,auto);
-    align-content: center;
+    align-content: start;
 }
-
-    .publication {
-        display: grid;
-        margin: 0;
-        padding: 3rem;
-        grid-gap: 0.5rem;
-        grid-template-rows: repeat(4,auto);
-        align-content: center;
-        text-align: center;
-    }
-
-        .publication > p {
-            text-align: justify;
-        }
 
 /* #endregion */
 
@@ -689,28 +653,16 @@ a.card {
     grid-gap: 1rem;
     grid-template-columns: auto;
     grid-template-rows: repeat(2,auto);
-    align-content: center;
+    align-content: start;
 }
 
-    .project {
-        display: grid;
-        margin: 0;
-        padding: 3rem;
-        grid-gap: 0.5rem;
-        grid-template-rows: repeat(4,auto);
-        align-content: center;
-        text-align: center;
-    }
-
-        .project > img {
+        .project img {
             aspect-ratio: 1 / 1;
             width: 100%;
             height: auto;
             max-width: 7rem;
             display: block;
-            margin: auto auto;
             object-fit: cover;
-            border-radius: 2.5rem;
         }
 
 /* #endregion */
@@ -722,29 +674,27 @@ a.card {
         margin: 0;
         grid-gap: 1rem;
         grid-template-rows: repeat(2,auto);
-        align-content: center;
+        align-content: start;
     }
 
     .article {
         display: grid;
         margin: 0;
-        padding: 2rem;
-        grid-gap: 2rem;
+        padding: 0;
+        grid-gap: 0;
         grid-template-columns: auto;
-        grid-template-rows: auto auto;
-        align-content: center;
+        grid-template-rows: auto;
+        align-content: start;
         text-align: justify;
     }
 
-        .article > img {
+        .article img {
             aspect-ratio: 1 / 1;
             width: 100%;
             height: auto;
             max-width: 7rem;
             display: block;
-            margin: auto auto;
             object-fit: cover;
-            border-radius: 2.5rem;
         }
 
     .infomyarticlecontainer {
@@ -816,10 +766,9 @@ a.card {
 }
 
 .groupcard {
-    background-color: var(--card-group-bg);
+    background-color: var(--bg-color);
     border-radius: var(--border-radius);
     padding: 1.5rem;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
     transition: box-shadow 0.3s ease;
 }
 
@@ -835,29 +784,28 @@ a.card {
     }
 
     .githubprojects {
-        grid-template-columns: repeat(2,auto);
-        grid-template-rows: repeat(4,auto);
+        grid-template-columns: auto;
     }
 
     .publications {
-        grid-template-columns: repeat(2,auto);
+        grid-template-columns: auto;
         grid-template-rows: auto;
     }
 
     .myprojects {
-        grid-template-columns: repeat(2,auto);
+        grid-template-columns: auto;
         grid-template-rows: auto;
     }
 
     .article {
-        grid-template-columns: auto 10fr;
+        grid-template-columns: auto;
         grid-template-rows: auto;
     }
 }
 
 @media (min-width: 1024px) {
     .home {
-        padding: 2rem 2rem 1rem 2rem;
+        padding: 1rem 2rem 1rem 2rem;
     }
 
     .container {

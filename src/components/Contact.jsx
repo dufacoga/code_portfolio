@@ -1,7 +1,10 @@
 function Contact({ children }) {
   return (
-    <div className="contact">
+    <div>
+      <div><span className='keyword'>public enum</span> <span className='function'>CONTACT</span>()</div>
+      {`{`}
       {children}
+      {`}`}
     </div>
   );
 }

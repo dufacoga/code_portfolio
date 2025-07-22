@@ -1,7 +1,7 @@
-function InfoSkill({ text }) {
+function InfoSkill({ text, end }) {
   return(
     <>
-      <span className="infoskill">{text}</span>
+    {text}{end}{`  `}
     </>
   );
 }

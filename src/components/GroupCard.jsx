@@ -1,14 +1,11 @@
-function GroupCard({ title, link, linkHref = '', groupClass = '', children }) {
+function GroupCard({ title, link, linkHref, children }) {
   return (
-    <div className="groupcard">
-      <div className="grouptitle">
-        <h2>{title}</h2>
-        <a href={linkHref} target="_blank">{link}</a>
-      </div>
-
-      <div className={`group ${groupClass}`}>
-        {children}
-      </div>
+    <div>
+      {link ? (<><div className='comment'>///  <a className="anondecorated" href={linkHref} target="_blank">{link}: {linkHref}</a></div></>) : null}
+      <div><span className='keyword'>public static class</span> <span className='function'>{title}</span>()</div>
+      {`{`}
+      <div className="tab">{children}</div>
+      {`}`}
     </div>
   );
 }

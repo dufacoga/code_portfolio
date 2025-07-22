@@ -1,11 +1,7 @@
-function InfoContact({ title, subtitle, groupClass, subtitleUrl = '', subtitleUrltarget = '_self' }) {
+function InfoContact({ title, subtitle, end, subtitleUrl, subtitleUrltarget }) {
   return (
     <>
-      <div className="infocontacttitle">
-        <i className={groupClass}></i>
-        <h4>{title}</h4>
-      </div>
-      <a href={subtitleUrl} target={subtitleUrltarget}>{subtitle}</a>
+    <div className="tab"><span className='codeblock'>{title}{end}<div className="comment">///  <a className="anondecorated" href={subtitleUrl} target={subtitleUrltarget}>{subtitle}</a></div></span></div>
     </>
   );
 }

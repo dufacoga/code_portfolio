@@ -1,18 +1,18 @@
-function InfoGithubProject({ name, description, stars, forks, language }) {
+function InfoGithubProject({ name, description, stars, forks, language, link, linkHref }) {
   const getLanguageColor = (lang) => {
     switch (lang) {
       case "HTML":
         return "#e34c26";
       case "JavaScript":
-        return "#f1e05a";
+        return "#e47d08ff";
       case "TypeScript":
         return "#2b7489";
       case "C#":
         return "#178600";
       case "CSS":
-        return "#563d7c";
+        return "#9169ceff";
       case "Kotlin":
-        return "#a97bff";
+        return "#cbb3f8ff";
       default:
         return "#cccccc";
     }
@@ -21,32 +21,19 @@ function InfoGithubProject({ name, description, stars, forks, language }) {
   const languageColor = getLanguageColor(language);
 
   return (
-    <div className="infogithubprojectcard">
-      <div className="infogithubprojecttitle">
-        <i className="fas fa-link"></i>
-        <h3>{name}</h3>
-      </div>
-
-      <div className="infogithubprojectdescription">{description}</div>
-
-      <div className="infogithubprojectdata">
-        <div className="infogithubprojectitems">
-          <div className="infogithubprojectstars">
-            <i className="fas fa-star"></i>
-            <span>{stars}</span>
-          </div>
-          <div className="infogithubprojectforks">
-            <i className="fas fa-code-branch"></i>
-            <span>{forks}</span>
-          </div>
-        </div>
-
-        <div className="infogithubprojectlenguaje">
-          <i style={{ color: languageColor }}>●</i>
-          <span>{language}</span>
-        </div>
-      </div>
+    <>
+    <div>
+      {link ? (<><div className='comment'>///  <a className="anondecorated" href={linkHref} target="_blank">{link}: {linkHref}</a></div></>) : null}
+      <div><span className='keyword'>private void</span> <span className='function'>{name.replace(/\s+/g, '')}</span>()</div>
+      {`{`}
+      <div className="tab"><span className='keyword'>var</span> _Description = <span className="string text-break">"{description}"</span>;</div>
+      <div className="tab"><span className='keyword'>var</span> _Stars = <span className="string text-break">"{stars}"</span>;</div>
+      <div className="tab"><span className='keyword'>var</span> _Forks = <span className="string text-break">"{forks}"</span>;</div>
+      <div className="tab"><span className='keyword'>var</span> _Language = <span className="string text-break">"<i style={{ color: languageColor }}>●</i> {language}"</span>;</div>
+      {`}`}
     </div>
+    <br />
+    </>
   );
 }
 
