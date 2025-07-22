@@ -18,13 +18,13 @@ This project serves as a modern personal landing page to showcase GitHub project
 
 <p align="center">
   <a href="https://dufacoga.github.io">
-    <img src="https://github.com/user-attachments/assets/89205028-4249-4259-bd03-c1874080511d" alt="Live Demo Preview" width="90%" />
+    <img src="https://github.com/user-attachments/assets/1819423d-c185-4bd8-8ef3-e32eff78b4b7" alt="Live Demo Preview" width="90%" />
   </a>
 </p>
 <p align="center">
-  <a href="https://dufacoga.github.io/react-portfolio">View Demo</a>
+  <a href="https://dufacoga.github.io/code_portfolio">View Demo</a>
   ·
-  <a href="https://github.com/dufacoga/react-portfolio/issues">Report Bug</a>
+  <a href="https://github.com/dufacoga/code_portfolio/issues">Report Bug</a>
 </p>
 
 ---
@@ -45,12 +45,18 @@ This project serves as a modern personal landing page to showcase GitHub project
 
 **The responsive behavior (mobile ↔️ desktop)**
 <p align="start">
-  <img src="https://github.com/user-attachments/assets/a25078f1-7467-4fde-b080-9bb6edffdffc" alt="Responsive Demo" width="75%" />
+  <img src="https://github.com/user-attachments/assets/0f92c86f-d9e6-40d2-a6b8-b47a2abf1a3e" alt="Responsive Demo" width="75%" />
+  <br />
+  <br />
+  <img src="https://github.com/user-attachments/assets/3351ee9d-a18d-46b5-8bd4-ce1f3d9cca41" alt="Responsive Demo" width="35%" />
 </p>
 
 **Switching between themes (dark, light, default)**
 <p align="start">
-  <img src="https://github.com/user-attachments/assets/4a66446d-2b9c-4de3-b9f5-ef0d3ab3a6db" alt="Theme Switching Demo" width="75%" />
+  <img src="https://github.com/user-attachments/assets/0f92c86f-d9e6-40d2-a6b8-b47a2abf1a3e" alt="Theme Switching Demo" width="75%" />
+  <br />
+  <br />
+  <img src="https://github.com/user-attachments/assets/d3a75d42-86fd-4ad5-bd36-9878d41c6422" alt="Theme Switching Demo" width="75%" />
 </p>
 
 ---
