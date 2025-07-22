@@ -13,8 +13,8 @@ export default defineConfig({
         short_name: 'Portfolio',
         start_url: '/code_portfolio/',
         display: 'standalone',
-        background_color: '#ffffff',
-        theme_color: '#317EFB',
+        background_color: '#0c0f12',
+        theme_color: '#0c0f12',
         icons: [
           {
             src: '/code_portfolio/images/icon-192x192.png',
