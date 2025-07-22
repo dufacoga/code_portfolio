@@ -53,7 +53,7 @@ function Home() {
               <Profile
                 title="John Doe"
                 subtitle="Sr. Software Engineer | Distributed Systems Specialist | Node.js, Microservices Architecture"
-                imageUrl="images/profile.jpg"
+                imageUrl={`${import.meta.env.BASE_URL}images/profile.jpg`}
                 resumeUrl="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
               />
             </Card>
@@ -186,14 +186,14 @@ function Home() {
               <Card groupClass="project">
                 <InfoMyProject
                   title="Project Name"
-                  imageUrl="images/illustration-gallery-icon.png"
+                  imageUrl={`${import.meta.env.BASE_URL}images/illustration-gallery-icon.png`}
                   description="Lorem ipsum dolor sit amet..."
                 />
               </Card>
               <Card groupClass="project">
                 <InfoMyProject
                   title="Project Name"
-                  imageUrl="images/illustration-gallery-icon.png"
+                  imageUrl={`${import.meta.env.BASE_URL}images/illustration-gallery-icon.png`}
                   description="Lorem ipsum dolor sit amet..."
                 />
               </Card>
@@ -206,7 +206,7 @@ function Home() {
                 <InfoMyArticle
                   title="Rate Limiting with Bottleneck"
                   time="about 1 year ago"
-                  imageUrl="images/amazonawsarticles.png"
+                  imageUrl={`${import.meta.env.BASE_URL}images/amazonawsarticles.png`}
                   description="In modern web dev, APIs are the lifeblood..."
                 >
                   <InfoHashtag text="#api" end="," />
@@ -219,7 +219,7 @@ function Home() {
                 <InfoMyArticle
                   title="Rate Limiting with Bottleneck"
                   time="about 1 year ago"
-                  imageUrl="images/amazonawsarticles.png"
+                  imageUrl={`${import.meta.env.BASE_URL}images/amazonawsarticles.png`}
                   description="In modern web dev, APIs are the lifeblood..."
                 >
                   <InfoHashtag text="#api" end="," />
@@ -236,7 +236,7 @@ function Home() {
       <div className="footer">
         <Card groupClass="footercard">
           <span>
-            Inspired by <i className="fab fa-github"></i>Arifszn’s design. Fully recoded from scratch by <i className="fab fa-github"></i>Dufacoga.
+            Developed entirely by <i className="fab fa-github"></i>Dufacoga.
           </span>
         </Card>
       </div>
