@@ -22,7 +22,7 @@ This project serves as a modern personal landing page to showcase GitHub project
   </a>
 </p>
 <p align="center">
-  <a href="https://dufacoga.github.io/code_portfolio">View Demo</a>
+  <a href="https://dufacoga.github.io/code_portfolio/">View Demo</a>
   ·
   <a href="https://github.com/dufacoga/code_portfolio/issues">Report Bug</a>
 </p>
