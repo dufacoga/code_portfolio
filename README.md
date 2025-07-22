@@ -7,6 +7,10 @@
   <a href="https://github.com/dufacoga/code_portfolio/commits/main"><img src="https://img.shields.io/github/last-commit/dufacoga/code_portfolio"/></a>
   <a href="https://github.com/dufacoga/code_portfolio/blob/main/CONTRIBUTING.md"><img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat"/></a>
   <a href="https://github.com/dufacoga/code_portfolio/blob/main/LICENSE"><img src="https://img.shields.io/github/license/dufacoga/code_portfolio"/></a>
+  <br />
+  <a href="https://www.paypal.com/donate/?business=R2J9NH55HXKGJ&no_recurring=0&currency_code=USD"><img src="https://img.shields.io/badge/PayPal-Donate-blue.svg"/></a>
+  <a href="https://www.patreon.com/dufacoga"><img src="https://img.shields.io/badge/Patreon-Become%20a%20Patron-black.svg"/></a>
+  <a href="https://ko-fi.com/dufacoga"><img src="https://img.shields.io/badge/Ko--fi-Buy%20me%20a%20coffee-FFFFFF.svg?logo=ko-fi&logoColor=white"/></a>
 </p>
 
 A responsive and elegant personal portfolio built entirely with **React** and **pure CSS Grid**.  
